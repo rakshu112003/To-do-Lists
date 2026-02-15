@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TODO App Demo</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+  h1 { color: #333; }
+  ul { list-style: none; padding-left: 0; }
+  li { margin: 8px 0; font-size: 18px; }
+  .pending { color: orange; }
+  .done { color: green; }
+</style>
+</head>
+<body>
+<h1>TODO App Demo</h1>
+<ul id="todo-list"></ul>
+
+<script>
+  // Urgent demo tasks
+  const tasks = [
+    { id: 1, task: "Simple Task", completed: false },
+    { id: 2, task: "MERN Stack Project Completed", completed: true },
+    { id: 3, task: "Python Project Finished", completed: true },
+    { id: 4, task: "Write Report", completed: false }
+  ];
+
+  const list = document.getElementById("todo-list");
+
+  // Render instantly
+  for (let i = 0; i < tasks.length; i++) {
+    const li = document.createElement("li");
+    const task = tasks[i];
+    li.innerHTML = task.task + " - " + (task.completed ? '<span class="done">Done ✅</span>' : '<span class="pending">Pending ⏳</span>');
+    list.appendChild(li);
+  }
+</script>
+</body>
+</html>
