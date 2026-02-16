@@ -47,6 +47,9 @@ Copy code
 Bash
 python app.py
 Default server URL: http://127.0.0.1:5000
+Endpoint to view tasks: `/todos`
+- After running backend locally:
+  - Navigate to http://127.0.0.1:5000/todos
 Ensure MySQL database credentials are correct in db_config.py
 Frontend
 Navigate to frontend/ folder
